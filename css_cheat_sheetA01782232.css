@@ -1,33 +1,109 @@
-h1, h4
+h1, h2, h3, h4, h5, h6 {
+    color: palegreen;
+    font: courier;
+    font-family: monospace;}
+
+p {
+    color: rgb(194, 241, 194);
+    font: courier;
+    font-family: monospace;}
+
+body {
+    background-color: darkslategrey;}
+
+#summary
 {
-    color: lightpink;
+    text-align: center;
+    color: rgb(194, 241, 194);
+    font-family: monospace;
+    font: courier;
+    font-size:large;
 }
 
-body 
+#details
 {
-    background-color: black;
+    text-align: center;
+    color:rgb(194, 241, 194);
 }
 
-p
+#border 
 {
-    color: white;
-}
-
-h2
-{
-    color: palevioletred
-}
-
-#border
-{
-    border-color:aliceblue;
-    border-style:dashed;
-    border-width: 2px;
-
+    border-color: rgb(194, 241, 194);
+    border-style: dashed;
+    border-width: 20px, solid;
 }
 
 #border-left
 {
-    border-left: 25px solid;
-    border-color: olivedrab;
+    border-left-color: rgb(194, 241, 194);
+    border-left-style: solid;
+    border-left-width: 2px;
 }
+
+#border-right
+{
+    border-right-color: rgb(194, 241, 194);
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+#border-top
+{
+    border-top-color: rgb(194, 241, 194);
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+#border-bottom
+{
+    border-bottom-color:rgb(194, 241, 194);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+#border-radius {
+    color: rgb(194, 241, 194)}
+
+#background-image {
+    color: rgb(194, 241, 194)}
+
+#color {
+    color: salmon}
+
+#font {
+    font-family: monospace;
+    font: courier; }
+
+#font-family {
+    font-family: fantasy;
+}
+
+#font-style, font-weight {
+    color: rgb(194, 241, 194)}
+
+#width {
+    width: 100px;}
+
+#height {
+    height: 100px;}
+
+#list-style {
+    color: rgb(194, 241, 194)}
+
+#margin {
+    color: rgb(194, 241, 194)}
+
+#padding {
+    color: rgb(194, 241, 194)}
+
+#overflow {
+    color: rgb(194, 241, 194)}
+
+#display {
+    color: rgb(194, 241, 194)}
+
+#position {
+    color: rgb(194, 241, 194)}
+
+#filter {
+    color: rgb(194, 241, 194)}
