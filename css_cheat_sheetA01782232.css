@@ -1,0 +1,33 @@
+h1, h4
+{
+    color: lightpink;
+}
+
+body 
+{
+    background-color: black;
+}
+
+p
+{
+    color: white;
+}
+
+h2
+{
+    color: palevioletred
+}
+
+#border
+{
+    border-color:aliceblue;
+    border-style:dashed;
+    border-width: 2px;
+
+}
+
+#border-left
+{
+    border-left: 25px solid;
+    border-color: olivedrab;
+}
