@@ -1,19 +1,29 @@
 h1, h2, h3, h4, h5, h6 {
-    color: palegreen;
+    color: rgb(23, 128, 23);
     font: courier;
     font-family: monospace;}
 
 p {
-    color: rgb(194, 241, 194);
+    color: rgb(104, 159, 104);
     font: courier;
-    font-family: monospace;}
+    font-family: monospace;
+    text-align:justify;}
 
 body {
     background-color: darkslategrey;}
 
+#box
+{
+    border-color: rgb(104, 159, 104);
+    border-style: solid;
+    border-width: 7px;
+    padding: 100px;
+    background-color: rgb(194, 241, 194);
+    margin: 200px;
+}
+
 #summary
 {
-    text-align: center;
     color: rgb(194, 241, 194);
     font-family: monospace;
     font: courier;
@@ -22,7 +32,7 @@ body {
 
 #details
 {
-    text-align: center;
+    
     color:rgb(194, 241, 194);
 }
 
@@ -62,17 +72,21 @@ body {
 }
 
 #border-radius {
-    color: rgb(194, 241, 194)}
+    border-color:rgb(194, 241, 194);
+    border-radius: 40%;
+    border-style: dotted;
+    height: auto;
+    margin:auto;}
 
 #background-image {
-    color: rgb(194, 241, 194)}
+    color:rgb(194, 241, 194);}
 
 #color {
     color: salmon}
 
 #font {
-    font-family: monospace;
-    font: courier; }
+    font-family: sans-serif;
+    font: arial; }
 
 #font-family {
     font-family: fantasy;
@@ -88,15 +102,22 @@ body {
     height: 100px;}
 
 #list-style {
-    color: rgb(194, 241, 194)}
+    color: rgb(194, 241, 194);
+    list-style:circle;
+    font-family: monospace;
+    font: courier;
+ }
 
 #margin {
-    color: rgb(194, 241, 194)}
+    margin: 10%;
+}
 
 #padding {
-    color: rgb(194, 241, 194)}
+    color: rgb(194, 241, 194);
+    padding: 10%;}
 
 #overflow {
+    overflow:scroll;
     color: rgb(194, 241, 194)}
 
 #display {
@@ -106,4 +127,4 @@ body {
     color: rgb(194, 241, 194)}
 
 #filter {
-    color: rgb(194, 241, 194)}
+    color: rgb(194, 241, 194);}
