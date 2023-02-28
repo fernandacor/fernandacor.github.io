@@ -12,16 +12,6 @@ p {
 body {
     background-color: darkslategrey;}
 
-#box
-{
-    border-color: rgb(104, 159, 104);
-    border-style: solid;
-    border-width: 7px;
-    padding: 100px;
-    background-color: rgb(194, 241, 194);
-    margin: 200px;
-}
-
 #summary
 {
     color: rgb(194, 241, 194);
@@ -79,7 +69,10 @@ body {
     margin:auto;}
 
 #background-image {
-    color:rgb(194, 241, 194);}
+    color:black;
+    background-image: url(https://www.shutterstock.com/image-vector/horizontal-white-banner-floral-backdrop-600w-1864127092.jpg);
+    height: 200px;
+}
 
 #color {
     color: salmon}
@@ -92,8 +85,16 @@ body {
     font-family: fantasy;
 }
 
-#font-style, font-weight {
-    color: rgb(194, 241, 194)}
+#font-style {
+    color: rgb(194, 241, 194);
+    font-style: italic;
+}
+
+#font-weight
+{
+    font-weight: bolder;
+    color: rgb(194, 241, 194)
+}
 
 #width {
     width: 100px;}
@@ -118,13 +119,36 @@ body {
 
 #overflow {
     overflow:scroll;
-    color: rgb(194, 241, 194)}
+    color: rgb(194, 241, 194);}
 
 #display {
-    color: rgb(194, 241, 194)}
+    color: rgb(19, 72, 19);
+    
+    display: block;
+    width: 20%;
+    height: 10%;
+    padding: 10px;
+    margin: auto;
+    background-color: rgb(213, 229, 211);
+    border-radius: 10%;
+}
 
 #position {
-    color: rgb(194, 241, 194)}
+    color: rgb(194, 241, 194);
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(22, 35, 63);
+
+}
 
 #filter {
-    color: rgb(194, 241, 194);}
+    color: black;
+filter:blur(background-image);
+background-image:url(https://www.shutterstock.com/image-vector/hello-summer-beautiful-girl-hat-600w-1993989674.jpg);
+height: 100px;
+}
+
+#espaciovacio
+{
+    height: 100px;
+}
