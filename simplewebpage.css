@@ -1,0 +1,120 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: grid;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.grid-container
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr 3fr 1fr; 
+}
+
+#menu
+{
+    background-color: rgb(37, 64, 75);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    grid-column: span 3;
+    grid-row: 1;
+}
+
+#header
+{ 
+    background-color:rgb(185, 125, 45);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-row: 2;
+    grid-column: span 3;
+}
+
+#suscription
+{ 
+    background-color: rgb(37, 64, 75);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 3;
+    grid-column: span 3;
+}
+
+#white
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    grid-row: 4;
+    grid-column: span 3;
+    background-color: white;
+}
+
+#bloque
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    grid-column: span 1;
+}
+
+img
+{
+    width: 50px;
+    height: auto;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#copyright
+{
+    background-color: rgb(37, 64, 75);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 5;
+    grid-column: span 3;
+}
+
+.botonfalso
+{
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#suscribebutton
+{
+    background-color: rgb(185, 125, 45);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
