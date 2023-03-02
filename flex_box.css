@@ -1,9 +1,19 @@
 div
 {
-    border: black, solid, 2px;
+    border: black solid 1px;
 }
 
 .flex_container
+{   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex_item
 {
     margin: 5%;
+    flex-shrink: 1;
+    flex-grow: 3;
 }
