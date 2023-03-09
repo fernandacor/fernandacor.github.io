@@ -1,0 +1,23 @@
+body
+{
+    margin: 5px;
+    background-color: rgb(250, 253, 232);
+}
+
+h1
+{
+    color: rgb(250, 222, 52);
+    font-weight:bolder;
+}
+
+
+.gridContainer
+{
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(250, 222, 52) 4px;
+}
