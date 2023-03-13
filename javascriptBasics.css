@@ -4,7 +4,7 @@ body
     background-color: rgb(250, 253, 232);
 }
 
-h1, h2, h3
+h1, h2, h4
 {
     text-align: center;
     color: rgb(250, 222, 52);
@@ -32,4 +32,6 @@ h1, h2, h3
     border: solid rgb(250, 222, 52) 4px;
     display: wrap;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 }
