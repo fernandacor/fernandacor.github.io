@@ -1,5 +1,5 @@
 // console.log for outputs
-// 1.- Ejercicio 1
+// EJERCICIO 1
 function primerNumeroQueNoSeRepite(str){
   const freq = {};
   for(let i = 0; i < str.length; i++){
@@ -28,36 +28,24 @@ console.log(primerNumeroQueNoSeRepite('abacddbec'));
 
 
 // 2.- Escribe una función que implemente el algoritmo 'bubble-sort' para ordenar una lista de números.
-function bubbleSorter()
+function bubbleSorter(numList)
 {
-
+  for (let i = 0; i < numList.length; i++)
+  {
+    for (let j = 0; j < numList.length - 1 - i; j++) 
     {
-        for (let i; i = bubbleSort.length; i++)
-        {
-            
-        }
-
-    }
-
+      if (numList[j] > numList[j + 1]) 
+      {
+        [numList[j], numlist[j+1]] = [numLis[j+1], numList[j]];
+      }
+    }   
+  }
 }
 
-const bubbleSort = arr => {
-    const l = arr.length;
-    for (let i = 0; i < l; i++ ) {
-      for (let j = 0; j < l - 1 - i; j++ ) {
-        if ( arr[ j ] > arr[ j + 1 ] ) {
-          [ arr[ j ], arr[ j + 1 ] ] = [ arr[ j + 1 ], arr[ j ] ];
-        }
-      }
-    }
-  
-    return arr;
-  };
-  
-  const arr = [10, 4, 40, 32, 67, 12, 43, 31, 65, 1];
-  const result = bubbleSort(arr);
-  
-  result;
+console.log('Ejercicio 2: Bubblesort');
+console.log('Original list: [3, 7, 9, 10, 0, 2, 5, 1, 8, 4]');
+console.log(numList = [3, 7, 9, 10, 0, 2, 5, 1, 8, 4]);
+console.log(bubbleSorter(numList));
 
 // 3.- 
 function invertArray()
@@ -364,4 +352,4 @@ function descendingArray(array)
 // console.log("Lista ordenada: \n", orderedList); 
 
 const orderedList=descendingArray(list);
-console.log("Ejercicio 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.\n Lista desordenada:\n" + list + " \n Lista ordenada: \n" + orderedList);
+console.log('Ejercicio 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.\n Lista desordenada:\n' + list + '\n Lista ordenada: \n' + orderedList);
