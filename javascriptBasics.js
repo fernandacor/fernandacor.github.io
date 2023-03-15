@@ -50,7 +50,7 @@ function bubbleSorter(numList)
 
 console.log('EJERCICIO 2: Función que implementa el algoritmo bubblesort para ordenar una lista de números.');
 console.log('Original list: [3, 7, 9, 10, 0, 2, 5, 1, 8, 4]');
-console.log(numList = [3, 7, 9, 10, 0, 2, 5, 1, 8, 4]);
+let numList = [3, 7, 9, 10, 0, 2, 5, 1, 8, 4];
 console.log(bubbleSorter(numList));
 
 // EJERCICIO 3
