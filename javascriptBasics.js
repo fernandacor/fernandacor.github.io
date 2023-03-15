@@ -139,7 +139,7 @@ function hackerSpeak(hackerString)
       }
     }
 }
-let hackerString = "JavaScript es divertido";
+const hackerString = "JavaScript es divertido";
 console.log('EJERCICIO 6: Función que cambia una cadena de texto a Hacker Speak.');
 console.log('Cadena original: Javascript es divertido');
 console.log(hackerSpeak(hackerString));
