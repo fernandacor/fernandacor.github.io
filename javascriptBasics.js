@@ -26,7 +26,6 @@ function primerNumeroQueNoSeRepite(str)
   return null;
 }
 
-//console.log('Ejercicio 1: '+ primerNumeroQueNoSeRepite('abacddbec'));
 console.log('EJERCICIO 1: Función que encuentre el primer carácter de una cadena de texto que no se repite.');
 console.log('String: (abacddbec)');
 console.log(primerNumeroQueNoSeRepite('abacddbec'));
@@ -95,7 +94,7 @@ function capitalizarPalabra(str)
 }
 
 console.log('EJERCICIO 4: Función que recibe una cadena de texto y regresa una nueva con la primer letra de cada palabra en mayúscula.');
-console.log("String original: 'hola mundo'")
+console.log("String original: 'hola mundo'");
 console.log(capitalizarPalabra('hola mundo'));
 
 
@@ -119,16 +118,32 @@ function MCD(x, y)
   }
 
   console.log('EJERCICIO 5: Función que calcula el máximo común divisor de dos números.');
-  console.log("Números: 10, 100")
-  console.log(MCD(10,100))
+  console.log("Números: 10, 100");
+  console.log(MCD(10,100));
 
-// 6.-Crea una función que cambie una cadena de texto a 'Hacker Speak'. Por ejemplo, para la cadena 'Javascript es divertido', su hacker speak es: 'J4v45c1pt 35 d1v3rt1d0'.
-function hackerSpeak()
+// EJERCICIO 6
+function hackerSpeak(hackerString)
 {
-    // if A existe, replace it por 4, E = 3, I = 1, o = 0, U = ??
-    // recorrer el array
-    // console.log(cadena.replace('A', '4'))
+    let hackerString = "JavaScript es divertido";
+    let hS = {a:4, b:8, e:3, g:6, i:1, l:1, o:0, s:5, t:7, z:2};
+    const l = hackerString.length;
+    for (let i = 0; i < l; i++)
+    {
+      let nuevoString = " ";
+      if (hS[hackerString[i].toLowerCase()]) 
+      {
+        nuevoString += hS[hackerString[i].toLowerCase()];
+      } 
+      else 
+      {
+        nuevoString += hackerString[i];
+      }
+    }
 }
+
+console.log('EJERCICIO 6: Función que cambia una cadena de texto a Hacker Speak.');
+console.log("Cadena original: Javascript es divertido");
+console.log(hackerSpeak(hackerString));
 
 // EJERCICIO 7
 function factoriza(num)
@@ -146,8 +161,6 @@ function factoriza(num)
 console.log('EJERCICIO 7: Función que recibe un número y regresa una lista con todos sus factores.');
 console.log("Número: 12")
 console.log('[' + factoriza(12) + ']');
-
-//console.log('Actividad 7: [' + factoriza(12)+']');
 
 // EJERCICIO 8
 function quitaDuplicados(array)
@@ -206,7 +219,7 @@ const cadena1 = 'radar';
 const cadena2 = 'oso';
 const cadena3 = 'Hola mundo';
 
-console.log('EJERCICIO 10: Función que revisa si una cadena de texto es un palíndromo o no.')
+console.log('EJERCICIO 10: Función que revisa si una cadena de texto es un palíndromo o no.');
 console.log('radar = ' + esPalindromo(cadena1)); 
 console.log('oso = ' + esPalindromo(cadena2));
 console.log('Hola mundo = ' + esPalindromo(cadena3)); 
@@ -233,7 +246,7 @@ function alphSortList(lst)
 }
 
 console.log('EJERCICIO 11: Funcion para ordenar alfabeticamente las cadenas de texto en una lista');
-console.log("\nLista desordenada: \n", alphUnorderedList)
+console.log("\nLista desordenada: \n", alphUnorderedList);
 const alphOrderedList = alphSortList(alphUnorderedList);
 console.log("\nLista ordenada:\n",alphOrderedList);
 
@@ -289,9 +302,7 @@ console.log('Lista = [1, 2, 3, 4, 5, 6, 6, 7, 7, 8, 9]');
 console.log('Mediana: ' + resultado.mediana); 
 console.log('Moda: ' + resultado.moda);
 
-// 13.- Funcion pra determinar cual es la cadena mas frecuente dentro de una lista de cadenas de texto
-
-//const lst = ["perro", "gato", "jaguar", "perro", "elefante" ];
+// EJERCICIO 13
 
 function FrequentString(stringList) 
 {
@@ -321,8 +332,8 @@ function FrequentString(stringList)
   }
  
 console.log('EJERCICIO 13: Función que toma una lista de cadenas de texto y devuelve la más frecuente.');
-const lst = ["perro", "gato", "jaguar", "perro", "elefante" ];
-const mostFrequentData=FrequentString(lst)
+const lst = ["perro", "gato", "jaguar", "perro", "elefante"];
+const mostFrequentData=FrequentString(lst);
 console.log("\nValores de salida: \n\n| Cadena mas frecuente | Numero de repeticiones | Acumulador de todos los elementos | \n", mostFrequentData);
 
 
@@ -343,7 +354,7 @@ function PotenciaDeDos(num){
   return true;
 }
 
-console.log('EJERCICIO 14: Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.')
+console.log('EJERCICIO 14: Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.');
 console.log('Número = 4 --> ' + PotenciaDeDos(4));
 
 // EJERCICIO 15
@@ -367,7 +378,7 @@ function descendingArray(array)
     return array
   }
 
-console.log('EJERCICIO 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.')
-console.log("Lista desordenada:\n", list)
+console.log('EJERCICIO 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.');
+console.log("Lista desordenada:\n", list);
 const orderedList=descendingArray(list);
 console.log("Lista ordenada: \n", orderedList); 
