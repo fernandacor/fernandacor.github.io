@@ -291,7 +291,7 @@ console.log('Moda: ' + resultado.moda);
 
 // 13.- Funcion pra determinar cual es la cadena mas frecuente dentro de una lista de cadenas de texto
 
-const lst = ["perro", "gato", "jaguar", "perro", "elefante" ];
+//const lst = ["perro", "gato", "jaguar", "perro", "elefante" ];
 
 function FrequentString(stringList) 
 {
@@ -319,7 +319,9 @@ function FrequentString(stringList)
     );
     return [mostFrequentString, frequencyNum, accumulator];
   }
-  
+ 
+console.log('EJERCICIO 13: Función que toma una lista de cadenas de texto y devuelve la más frecuente.');
+const lst = ["perro", "gato", "jaguar", "perro", "elefante" ];
 const mostFrequentData=FrequentString(lst)
 console.log("\nValores de salida: \n\n| Cadena mas frecuente | Numero de repeticiones | Acumulador de todos los elementos | \n", mostFrequentData);
 
