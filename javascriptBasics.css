@@ -30,6 +30,7 @@ h1, h2, h4
     margin: 8px;
     padding: 10px; 
     border: solid rgb(250, 222, 52) 4px;
+    border-radius: 10%;
     display: wrap;
     flex-wrap: wrap;
     text-align: center;
