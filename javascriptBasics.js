@@ -32,25 +32,28 @@ console.log(primerNumeroQueNoSeRepite('abacddbec'));
 
 
 // EJERCICIO 2
-function bubbleSorter(numList)
+let numList = [3, 7, 9, 10, 0, 2, 5, 1, 8, 4];
+
+function bubbleSorter(notSorted)
 {
-  const len = numList.length;
+  const len = notSorted.length;
   for (let i = 0; i < len; i++)
   {
     for (let j = 0; j < len - 1 - i; j++) 
     {
-      if (numList[j] > numList[j + 1]) 
+      if (notSorted[j] > notSorted[j + 1]) 
       {
-        [numList[j], numList[j+1]] = [numList[j+1], numList[j]];
+        [notSorted[j], notSorted[j+1]] = [notSorted[j+1], notSorted[j]];
       }
     }   
   }
+  return notSorted;
 }
 
 console.log('EJERCICIO 2: Función que implementa el algoritmo bubblesort para ordenar una lista de números.');
 console.log('Original list: [3, 7, 9, 10, 0, 2, 5, 1, 8, 4]');
-let numList = [3, 7, 9, 10, 0, 2, 5, 1, 8, 4];
-console.log(bubbleSorter(numList));
+numListOrdenada = bubbleSorter(numList);
+console.log('New list: [' + numListOrdenada + ']');
 
 // EJERCICIO 3
 function newReversedArray(array) 
@@ -138,6 +141,7 @@ function hackerSpeak(hackerString)
         nuevoString += hackerString[i];
       }
     }
+    return hackerString;
 }
 const hackerString = 'JavaScript es divertido';
 console.log('EJERCICIO 6: Función que cambia una cadena de texto a Hacker Speak.');
