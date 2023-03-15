@@ -337,7 +337,7 @@ function PotenciaDeDos(num){
 
 console.log('Actividad 14: ' + PotenciaDeDos(4));
 
-// 15.- Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
+// 15.- 
 let list = [24, 36, 12, 5, 30, 99, 1];
 
 function descendingArray(array) 
@@ -357,6 +357,11 @@ function descendingArray(array)
     }
     return array
   }
-console.log("lista desordenada:\n", list)
+
+// console.log('Ejercicio 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.')
+// console.log("Lista desordenada:\n", list)
+// const orderedList=descendingArray(list);
+// console.log("Lista ordenada: \n", orderedList); 
+
 const orderedList=descendingArray(list);
-console.log("lista ordenada:", orderedList); 
+console.log("Ejercicio 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.\n Lista desordenada:\n" + list + " \n Lista ordenada: \n" + orderedList)
