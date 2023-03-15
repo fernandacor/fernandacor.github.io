@@ -139,7 +139,7 @@ function hackerSpeak(hackerString)
       }
     }
 }
-const hackerString = "JavaScript es divertido";
+const hackerString = 'JavaScript es divertido';
 console.log('EJERCICIO 6: Función que cambia una cadena de texto a Hacker Speak.');
 console.log('Cadena original: Javascript es divertido');
 console.log(hackerSpeak(hackerString));
@@ -171,7 +171,7 @@ console.log('EJERCICIO 8: Función que quita los elementos duplicados de un arre
 let numsRepetidos = [9, 3, 3, 3, 9, 1, 3, 1, 0, 1, 1, 0, 0];
 let numsNoRepetidos = quitaDuplicados(numsRepetidos);
 console.log("Array con números repetidos: " + numsRepetidos);
-console.log("Arary con números sin repetir: " + numsNoRepetidos);
+console.log("Array con números sin repetir: " + numsNoRepetidos);
 
 // EJERCICIO 9
 function longitudCadenaMasCorta(listaCadenas) 
