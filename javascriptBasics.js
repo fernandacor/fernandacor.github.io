@@ -35,13 +35,14 @@ console.log(primerNumeroQueNoSeRepite('abacddbec'));
 // EJERCICIO 2
 function bubbleSorter(numList)
 {
-  for (let i = 0; i < numList.length; i++)
+  const len = numList.length;
+  for (let i = 0; i < len; i++)
   {
-    for (let j = 0; j < numList.length - 1 - i; j++) 
+    for (let j = 0; j < len - 1 - i; j++) 
     {
       if (numList[j] > numList[j + 1]) 
       {
-        [numList[j], numlist[j+1]] = [numLis[j+1], numList[j]];
+        [numList[j], numList[j+1]] = [numList[j+1], numList[j]];
       }
     }   
   }
