@@ -122,7 +122,7 @@ function MCD(x, y)
   console.log(MCD(10,100));
 
 // EJERCICIO 6
-function hackerSpeak(hackerString)
+function hackerSpeak()
 {
     hackerString = "JavaScript es divertido";
     let hS = {a:4, b:8, e:3, g:6, i:1, l:1, o:0, s:5, t:7, z:2};
