@@ -125,28 +125,31 @@ function MCD(x, y)
   console.log(MCD(10,100));
 
 // EJERCICIO 6
-function hackerSpeak(hackerString)
+let normalString = "JavaScript es divertido";
+
+function hackerSpeak(normalString)
 {
     let hS = {a:4, b:8, e:3, g:6, i:1, l:1, o:0, s:5, t:7, z:2};
-    const l = hackerString.length;
+    const l = normalString.length;
+    let nuevoString = '';
     for (let i = 0; i < l; i++)
     {
-      let nuevoString = '';
-      if (hS[hackerString[i].toLowerCase()]) 
+      if (hS[normalString[i].toLowerCase()]) 
       {
-        nuevoString += hS[hackerString[i].toLowerCase()];
+        nuevoString += hS[normalString[i].toLowerCase()];
       } 
       else 
       {
-        nuevoString += hackerString[i];
+        nuevoString += normalString[i];
       }
     }
-    return hackerString;
+    return nuevoString;
 }
-const hackerString = 'JavaScript es divertido';
+
 console.log('EJERCICIO 6: Función que cambia una cadena de texto a Hacker Speak.');
 console.log('Cadena original: Javascript es divertido');
-console.log(hackerSpeak(hackerString));
+hackerString = hackerSpeak(normalString);
+console.log('HackerSpeak --> ' + hackerString);
 
 // EJERCICIO 7
 function factoriza(num)
