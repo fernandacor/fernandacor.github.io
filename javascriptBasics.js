@@ -1,11 +1,5 @@
 // console.log for outputs
-// 1.- 
-function noRepeat()
-{
-
-}
-
-//Ejercicio 1
+// 1.- Ejercicio 1
 function primerNumeroQueNoSeRepite(str){
   const freq = {};
   for(let i = 0; i < str.length; i++){
