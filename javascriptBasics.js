@@ -93,12 +93,6 @@ console.log("Mismo array invertido: " + nums);
 
 
 // 4.- Escribe una función que reciba una cadena de texto y regrese una nueva con la primer letra de cada palabra en mayúscula.
-function interCaps()
-{
-
-}
-
-//Crear funcion
 function capitalizarPalabra(str) {
   //llamar return para que regrese el resultado 
   return str
@@ -116,11 +110,6 @@ console.log(capitalizarPalabra('hola mundo'));
 
 
 // 5.- 
-function maxCommonDivider()
-{
-
-}
-
 //Crear funcion
 function MCD(x, y){
   //Crear variables para el mcd y el resto
@@ -294,7 +283,7 @@ console.log(resultado.moda);
 
 // 13.- Funcion pra determinar cual es la cadena mas frecuente dentro de una lista de cadenas de texto
 
-const lista = ["perro", "gato", "jaguar", "perro", "elefante" ];
+const lst = ["perro", "gato", "jaguar", "perro", "elefante" ];
 
 function FrequentString(stringList) 
 {
@@ -323,7 +312,7 @@ function FrequentString(stringList)
     return [mostFrequentString, frequencyNum, accumulator];
   }
   
-const mostFrequentData=FrequentString(lista)
+const mostFrequentData=FrequentString(lst)
 console.log("\nValores de salida: \n\n| Cadena mas frecuente | Numero de repeticiones | Acumulador de todos los elementos | \n", mostFrequentData);
 
 
