@@ -21,7 +21,10 @@ function primerNumeroQueNoSeRepite(str){
   return null;
 }
 
-console.log('Ejercicio 1: '+ primerNumeroQueNoSeRepite('abacddbec'));
+//console.log('Ejercicio 1: '+ primerNumeroQueNoSeRepite('abacddbec'));
+console.log('Ejercicio 1: Función que encuentre el primer carácter de una cadena de texto que no se repite.');
+console.log('String: (abacddbec)');
+console.log(primerNumeroQueNoSeRepite('abacddbec'));
 
 
 // 2.- Escribe una función que implemente el algoritmo 'bubble-sort' para ordenar una lista de números.
@@ -82,6 +85,8 @@ function reverseArray(array) {
 
 }
 
+console.log('Ejercicio 3: Una función que invierta un arreglo de números y regrese un nuevo arreglo con el resultado, otra función que modifique el mismo arreglo que se pasa como argumento.');
+
 let nums = [15, 34, 8, 24, 1];
 console.log("Array original: " + nums);
 
@@ -106,6 +111,8 @@ function capitalizarPalabra(str) {
     .join(' ');
 }
 
+console.log('Ejercicio 4: Función que recibe una cadena de texto y regresa una nueva con la primer letra de cada palabra en mayúscula.');
+console.log("String original: 'hola mundo'")
 console.log(capitalizarPalabra('hola mundo'));
 
 
@@ -126,6 +133,9 @@ function MCD(x, y){
   if(y==0) mcd = x;
   return mcd;
   }
+
+  console.log('Ejercicio 5: Función que calcula el máximo común divisor de dos números.');
+  console.log("Números: 10, 100")
   console.log(MCD(10,100))
 
 // 6.-Crea una función que cambie una cadena de texto a 'Hacker Speak'. Por ejemplo, para la cadena 'Javascript es divertido', su hacker speak es: 'J4v45c1pt 35 d1v3rt1d0'.
@@ -137,12 +147,6 @@ function hackerSpeak()
 }
 
 // 7.-
-function listMaker()
-{
-
-}
-
-// Ejercicio 7
 function factoriza(num){
   let lista = [];
   for(let i = 1; i <= num; i++){
@@ -152,25 +156,26 @@ function factoriza(num){
   }
   return lista;
 }
+console.log('Ejercicio 7: Función que recibe un número y regresa una lista con todos sus factores.');
+console.log("Número: 12")
+console.log('[' + factoriza(12) + ']');
 
-console.log('Actividad 7: [' + factoriza(12)+']');
+//console.log('Actividad 7: [' + factoriza(12)+']');
 
 
 // 8.- Escribe una función que quite los elementos duplicados de un arreglo y regrese una lista con los elementos que quedan. Por ejemplo: quitaDuplicados([1, 0, 1, 1, 0, 0]) -> [1, 0]
-function removeDuplicates()
-{
-
-}
-
-
 function quitaDuplicados(array) {
   return array.filter((item, i) => array.indexOf(item) === i);
 }
+
+console.log('Ejercicio 8: Función que quita los elementos duplicados de un arreglo y regresa una lista con los elementos que quedan.');
 
 let numsRepetidos = [9, 3, 3, 3, 9, 1, 3, 1, 0, 1, 1, 0, 0];
 let numsNoRepetidos = quitaDuplicados(numsRepetidos);
 console.log("Array con números repetidos: " + numsRepetidos);
 console.log("Arary con números sin repetir: " + numsNoRepetidos);
+
+
 
 // 9.- Cadena más corta
 function longitudCadenaMasCorta(listaCadenas) {
