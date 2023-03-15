@@ -364,4 +364,4 @@ function descendingArray(array)
 // console.log("Lista ordenada: \n", orderedList); 
 
 const orderedList=descendingArray(list);
-console.log("Ejercicio 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.\n Lista desordenada:\n" + list + " \n Lista ordenada: \n" + orderedList)
+console.log("Ejercicio 15: Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.\n Lista desordenada:\n" + list + " \n Lista ordenada: \n" + orderedList);
