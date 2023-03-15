@@ -129,7 +129,7 @@ function hackerSpeak(hackerString)
     const l = hackerString.length;
     for (let i = 0; i < l; i++)
     {
-      let nuevoString = " ";
+      let nuevoString = '';
       if (hS[hackerString[i].toLowerCase()]) 
       {
         nuevoString += hS[hackerString[i].toLowerCase()];
@@ -142,7 +142,7 @@ function hackerSpeak(hackerString)
 }
 
 console.log('EJERCICIO 6: Función que cambia una cadena de texto a Hacker Speak.');
-console.log("Cadena original: Javascript es divertido");
+console.log('Cadena original: Javascript es divertido');
 console.log(hackerSpeak(hackerString));
 
 // EJERCICIO 7
