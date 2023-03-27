@@ -1,3 +1,4 @@
+//SOLUCIONES GENERADAS UTILIZANDO CHAT GPT
 //EJERCICIO 1
 // Seleccionar el párrafo del DOM usando su ID
 const mousePosition = document.querySelector('#mousePosition');
@@ -83,6 +84,61 @@ changeButton.addEventListener('click', function() {
   // Actualizamos el contenido de la celda con el nuevo valor ingresado por el usuario
   cell.innerHTML = newValue;
 });
+
+//EJERCICIO 5
+// Obtenemos el select del documento
+const colorSelect = document.getElementById('colorSelect');
+
+// Obtenemos los botones del documento
+const btnAddColor = document.getElementById('btn-add-color');
+const btnRmvColor = document.getElementById('btn-rmv-color');
+
+// Agregamos un evento de click al botón para agregar color
+btnAddColor.addEventListener('click', function() {
+  // Generamos un color aleatorio
+  const color = getRandomColor();
+
+  // Creamos un elemento option y lo agregamos al select
+  const option = document.createElement('option');
+  option.value = color;
+  option.text = color;
+  colorSelect.add(option);
+});
+
+// Agregamos un evento de click al botón para eliminar color
+btnRmvColor.addEventListener('click', function() {
+  // Eliminamos el último elemento del select
+  colorSelect.remove(colorSelect.length - 1);
+});
+
+// Función para generar un color aleatorio
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+//EJERCICIO 6
+// Obtenemos la imagen del documento
+const imagenGato = document.getElementById('imagenGato');
+
+// Agregamos un evento de mouseover a la imagen
+imagenGato.addEventListener('mouseover', function() {
+  // Generamos dos números aleatorios entre 300 y 600 para el width y height
+  const width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+  const height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+
+  // Creamos una nueva URL para la imagen con el tamaño aleatorio
+  const newUrl = `http://placekitten.com/${width}/${height}`;
+
+  // Cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+  imagenGato.src = newUrl;
+});
+
 
 
 

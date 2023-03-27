@@ -24,6 +24,9 @@ table, td
 
 #griddy
 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-color: rgb(42, 77, 165);
     padding: 10%;
     border-radius: 10px;
