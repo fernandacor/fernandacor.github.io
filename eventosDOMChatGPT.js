@@ -61,6 +61,29 @@ insertColBtn.addEventListener("click", function() {
     });
 });
 
+//EJERCICIO 4
+// Obtenemos los elementos HTML de las cajas de entrada y el botón
+const rowIndexInput = document.getElementById('rowIndex');
+const colIndexInput = document.getElementById('colIndex');
+const newValueInput = document.getElementById('newValue');
+const changeButton = document.getElementById('btn-change');
+const table = document.getElementById('myTable');
+
+// Agregamos un evento de clic al botón
+changeButton.addEventListener('click', function() {
+  // Obtenemos los valores ingresados por el usuario en las cajas de entrada
+  const rowIndex = parseInt(rowIndexInput.value);
+  const colIndex = parseInt(colIndexInput.value);
+  const newValue = newValueInput.value;
+
+  // Obtenemos la fila y la celda de la tabla correspondiente a los índices ingresados
+  const row = table.rows[rowIndex];
+  const cell = row.cells[colIndex];
+
+  // Actualizamos el contenido de la celda con el nuevo valor ingresado por el usuario
+  cell.innerHTML = newValue;
+});
+
 
 
   
