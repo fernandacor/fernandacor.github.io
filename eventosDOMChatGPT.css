@@ -1,6 +1,13 @@
 *
 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Courier New', Courier, monospace
+}
+
+body
+{
+    background-color: #79b7a4;
+    color: white;
 }
 
 h1, h2, h3
@@ -11,12 +18,12 @@ h1, h2, h3
 .container
 {
     padding: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 table, td
 {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .grid
@@ -32,7 +39,8 @@ table, td
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: rgb(42, 77, 165);
+    background-color: #6ea091;
     padding: 10%;
     border-radius: 10px;
+    color: white;
 }
