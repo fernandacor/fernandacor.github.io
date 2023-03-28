@@ -54,43 +54,43 @@ function getFullNameCP() {
 
 //EJERCICIO 3 CON GPT
 // Obtener los botones de inserción de fila y columna
-var insertRowBtn = document.getElementById("btn-insert-r");
-var insertColBtn = document.getElementById("btn-insert-c");
+var insertRowBtnGPT = document.getElementById("btn-insert-r-GPT");
+var insertColBtnGPT = document.getElementById("btn-insert-c-GPT");
 
 // Agregar un evento de clic a cada botón de inserción
-insertRowBtn.addEventListener("click", function() {
+insertRowBtnGPT.addEventListener("click", function() {
     // Crear una nueva fila
-    var newRow = document.createElement("tr");
+    var newRowGPT = document.createElement("tr");
 
     // Crear dos nuevas celdas y agregarlas a la nueva fila
-    var newCell1 = document.createElement("td");
-    var newCell2 = document.createElement("td");
-    newRow.appendChild(newCell1);
-    newRow.appendChild(newCell2);
+    var newCell1GPT = document.createElement("td");
+    var newCell2GPT = document.createElement("td");
+    newRowGPT.appendChild(newCell1GPT);
+    newRowGPT.appendChild(newCell2GPT);
 
     // Obtener una referencia a la tabla y agregar la nueva fila al final
-    var table = document.getElementById("sampleTable");
-    table.appendChild(newRow);
+    var tableGPT = document.getElementById("sampleTableGPT");
+    tableGPT.appendChild(newRowGPT);
 });
 
-insertColBtn.addEventListener("click", function() {
+insertColBtnGPT.addEventListener("click", function() {
     // Obtener todas las filas de la tabla
-    var rows = document.querySelectorAll("#sampleTable tr");
+    var rowsGPT = document.querySelectorAll("#sampleTableGPT tr");
 
     // Para cada fila, crear una nueva celda y agregarla al final
-    rows.forEach(function(row) {
-        var newCell = document.createElement("td");
-        row.appendChild(newCell);
+    rowsGPT.forEach(function(rowGPT) {
+        var newCellGPT = document.createElement("td");
+        rowGPT.appendChild(newCellGPT);
     });
 });
 
     //EJERCICIO 3 CON COPILOT
-    //crea una función que inserte una fila y una columna en la tabla
+    //crea una función que inserte una fila y una columna en la tabla 
     function insertRow() {
         //obtenemos la tabla
-        var table = document.getElementById("sampleTable");
+        var table = document.getElementById("sampleTableCP");
         //creamos una nueva fila
-        var row = table.insertRow(-1);
+        var rowCP = table.insertRow(-1);
         //creamos dos nuevas celdas
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
@@ -101,7 +101,7 @@ insertColBtn.addEventListener("click", function() {
     
     function insertColumn() {
         //obtenemos la tabla
-        var table = document.getElementById("sampleTable");
+        var table = document.getElementById("sampleTableCP");
         //obtenemos todas las filas de la tabla
         var rows = table.rows;
         //recorremos las filas
@@ -112,6 +112,35 @@ insertColBtn.addEventListener("click", function() {
             cell.innerHTML = "";
         }
     }
+
+//EJERCICIO 3 CON COPILOT
+//crea una función que inserte una fila y una columna en la tabla cuando se haga clic en los botones de insertar fila y columna
+function insertRowCP() {
+    //obtenemos la tabla
+    var table = document.getElementById("sampleTableCP");
+    //creamos una nueva fila
+    var rowCP = table.insertRow(-1);
+    //creamos dos nuevas celdas
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    //mostramos las celdas en blanco
+    cell1.innerHTML = "";
+    cell2.innerHTML = "";
+}
+
+function insertColumnCP() {
+    //obtenemos la tabla
+    var table = document.getElementById("sampleTableCP");
+    //obtenemos todas las filas de la tabla
+    var rows = table.rows;
+    //recorremos las filas
+    for (var i = 0; i < rows.length; i++) {
+        //insertamos una celda en cada fila
+        var cell = rows[i].insertCell(-1);
+        //mostramos las celdas en blanco
+        cell.innerHTML = "";
+    }
+}
 
 //EJERCICIO 4 CON GPT
 // Obtenemos los elementos HTML de las cajas de entrada y el botón
@@ -138,19 +167,19 @@ changeButton.addEventListener('click', function() {
 
 //EJERCICIO 4 CON COPILOT
 //crea una función que cambie el valor de una celda de la tabla
-function changeValue() {
-    //obtenemos los valores de las cajas de texto
-    var rowIndex = document.getElementById("rowIndex").value;
-    var colIndex = document.getElementById("colIndex").value;
-    var newValue = document.getElementById("newValue").value;
-    //obtenemos la tabla
-    var table = document.getElementById("myTable");
-    //obtenemos la fila y la celda de la tabla
-    var row = table.rows[rowIndex];
-    var cell = row.cells[colIndex];
-    //mostramos el nuevo valor en la celda
-    cell.innerHTML = newValue;
-  }
+// function changeValue() {
+//     //obtenemos los valores de las cajas de texto
+//     var rowIndex = document.getElementById("rowIndex").value;
+//     var colIndex = document.getElementById("colIndex").value;
+//     var newValue = document.getElementById("newValue").value;
+//     //obtenemos la tabla
+//     var table = document.getElementById("myTable");
+//     //obtenemos la fila y la celda de la tabla
+//     var row = table.rows[rowIndex];
+//     var cell = row.cells[colIndex];
+//     //mostramos el nuevo valor en la celda
+//     cell.innerHTML = newValue;
+//   }
 
 //EJERCICIO 5 CON GPT
 // Obtenemos el select del documento
@@ -191,32 +220,32 @@ function getRandomColor() {
 
 //EJERCICIO 5 CON COPILOT
 //crea una función que agregue y elimine colores de un select
-function addColor() {
-    //generamos un color aleatorio
-    var color = getRandomColor();
-    //creamos un elemento option
-    var option = document.createElement("option");
-    //agregamos el color como valor y texto del option
-    option.value = color;
-    option.text = color;
-    //agregamos el option al select
-    colorSelect.add(option);
-  }
+// function addColor() {
+//     //generamos un color aleatorio
+//     var color = getRandomColor();
+//     //creamos un elemento option
+//     var option = document.createElement("option");
+//     //agregamos el color como valor y texto del option
+//     option.value = color;
+//     option.text = color;
+//     //agregamos el option al select
+//     colorSelect.add(option);
+//   }
 
-function removeColor() {
-    //eliminamos el último elemento del select
-    colorSelect.remove(colorSelect.length - 1);
-  }
+// function removeColor() {
+//     //eliminamos el último elemento del select
+//     colorSelect.remove(colorSelect.length - 1);
+//   }
 
-//función para generar un color aleatorio
-function getRandomColor() {
-    var letters = "0123456789ABCDEF";
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+// //función para generar un color aleatorio
+// function getRandomColor() {
+//     var letters = "0123456789ABCDEF";
+//     var color = "#";
+//     for (var i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+//   }
 
   
   //EJERCICIO 6 CON GPT
@@ -238,16 +267,16 @@ function getRandomColor() {
     
     //EJERCICIO 6 CON COPILOT
     //crea una función que cambie el tamaño de la imagen al pasar el mouse sobre ella
-    function changeSize() {
-        //generamos un tamaño aleatorio
-        var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-        var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-        //creamos una nueva URL para la imagen con el tamaño aleatorio
-        var newUrl = "http://placekitten.com/" + width + "/" + height;
-        //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
-        var image = document.getElementById("image");
-        image.src = newUrl;
-      }
+    // function changeSize() {
+    //     //generamos un tamaño aleatorio
+    //     var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+    //     var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+    //     //creamos una nueva URL para la imagen con el tamaño aleatorio
+    //     var newUrl = "http://placekitten.com/" + width + "/" + height;
+    //     //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+    //     var image = document.getElementById("image");
+    //     image.src = newUrl;
+    //   }
     
     
     
