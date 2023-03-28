@@ -1,36 +1,58 @@
-//SOLUCIONES GENERADAS UTILIZANDO CHAT GPT
-//EJERCICIO 1
+//EJERCICIO 1 CON GPT
 // Seleccionar el párrafo del DOM usando su ID
-const mousePosition = document.querySelector('#mousePosition');
-
+const mousePositionGPT = document.querySelector('#mousePositionGPT');
 // Agregar un event listener para capturar el movimiento del mouse en el documento
 document.addEventListener('mousemove', function(event) {
   // Actualizar el texto del párrafo con la posición actual del mouse
-  mousePosition.textContent = `Posición del mouse: X=${event.clientX}, Y=${event.clientY}`;
+  mousePositionGPT.textContent = `Posición del mouse: X=${event.clientX}, Y=${event.clientY}`;
 });
 
-//EJERCICIO 2
+//EJERCICIO 1 CON COPILOT
+//crea una función que muestre la posición del mouse en el documento
+function mousePositionCP(event) {
+    //obtenemos la posición del mouse
+    var x = event.clientX;
+    var y = event.clientY;
+    //obtenemos el elemento del DOM donde se mostrará la posición del mouse
+    var mousePositionCP = document.getElementById("mousePositionCP");
+    //mostramos la posición del mouse en el elemento del DOM
+    mousePositionCP.innerHTML = "Posición del mouse: X=" + x + ", Y=" + y;
+  }
+
+//EJERCICIO 2 CON GPT
 // Agregar un evento de clic al botón de envío del formulario
-document.getElementById("form1-submit").addEventListener("click", function(event) {
+document.getElementById("form1-submitGPT").addEventListener("click", function(event) {
     event.preventDefault(); // Evitar que el formulario se envíe al hacer clic en el botón
   
     // Obtener los valores de los campos de nombre y apellido
-    var firstName = document.getElementById("form-fname").value;
-    var lastName = document.getElementById("form-lname").value;
+    var firstNameGPT = document.getElementById("form-fnameGPT").value;
+    var lastNameGPT = document.getElementById("form-lnameGPT").value;
   
     // Combinar los valores de nombre y apellido en una variable de nombre completo
-    var fullName = firstName + " " + lastName;
+    var fullNameGPT = firstNameGPT + " " + lastNameGPT;
   
     // Crear un nuevo elemento de párrafo y establecer su contenido de texto en el nombre completo
-    var fullNameElement = document.createElement("p");
-    fullNameElement.innerText = fullName;
+    var fullNameElementGPT = document.createElement("p");
+    fullNameElementGPT.innerText = fullNameGPT;
   
     // Obtener una referencia al formulario y agregar el nuevo elemento de párrafo después del formulario
-    var formElement = document.getElementById("form1");
-    formElement.parentNode.insertBefore(fullNameElement, formElement.nextSibling);
+    var formElementGPT = document.getElementById("form1GPT");
+    formElementGPT.parentNode.insertBefore(fullNameElementGPT, formElementGPT.nextSibling);
   });
 
-//EJERCICIO 3
+//EJERCICIO 2 CON COPILOT
+//crea una función que obtenga el nombre y apellido de las cajas y que agregue después del botón un elemento que muestre el nombre completo
+function getFullNameCP() {
+    //obtenemos el nombre y apellido de las cajas de texto
+    var firstNameCP = document.getElementById("form-fnameCP").value;
+    var lastNameCP = document.getElementById("form-lnameCP").value;
+    //obtenemos el elemento del DOM donde se mostrará el nombre completo
+    var fullNameElementCP = document.getElementById("fullNameCP");
+    //mostramos el nombre completo en el elemento del DOM
+    fullNameElementCP.innerHTML = "Nombre completo: " + firstNameCP + " " + lastNameCP;
+  }
+
+//EJERCICIO 3 CON GPT
 // Obtener los botones de inserción de fila y columna
 var insertRowBtn = document.getElementById("btn-insert-r");
 var insertColBtn = document.getElementById("btn-insert-c");
@@ -62,7 +84,36 @@ insertColBtn.addEventListener("click", function() {
     });
 });
 
-//EJERCICIO 4
+    //EJERCICIO 3 CON COPILOT
+    //crea una función que inserte una fila y una columna en la tabla
+    function insertRow() {
+        //obtenemos la tabla
+        var table = document.getElementById("sampleTable");
+        //creamos una nueva fila
+        var row = table.insertRow(-1);
+        //creamos dos nuevas celdas
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        //mostramos las celdas en blanco
+        cell1.innerHTML = "";
+        cell2.innerHTML = "";
+    }
+    
+    function insertColumn() {
+        //obtenemos la tabla
+        var table = document.getElementById("sampleTable");
+        //obtenemos todas las filas de la tabla
+        var rows = table.rows;
+        //recorremos las filas
+        for (var i = 0; i < rows.length; i++) {
+            //insertamos una celda en cada fila
+            var cell = rows[i].insertCell(-1);
+            //mostramos las celdas en blanco
+            cell.innerHTML = "";
+        }
+    }
+
+//EJERCICIO 4 CON GPT
 // Obtenemos los elementos HTML de las cajas de entrada y el botón
 const rowIndexInput = document.getElementById('rowIndex');
 const colIndexInput = document.getElementById('colIndex');
@@ -85,7 +136,23 @@ changeButton.addEventListener('click', function() {
   cell.innerHTML = newValue;
 });
 
-//EJERCICIO 5
+//EJERCICIO 4 CON COPILOT
+//crea una función que cambie el valor de una celda de la tabla
+function changeValue() {
+    //obtenemos los valores de las cajas de texto
+    var rowIndex = document.getElementById("rowIndex").value;
+    var colIndex = document.getElementById("colIndex").value;
+    var newValue = document.getElementById("newValue").value;
+    //obtenemos la tabla
+    var table = document.getElementById("myTable");
+    //obtenemos la fila y la celda de la tabla
+    var row = table.rows[rowIndex];
+    var cell = row.cells[colIndex];
+    //mostramos el nuevo valor en la celda
+    cell.innerHTML = newValue;
+  }
+
+//EJERCICIO 5 CON GPT
 // Obtenemos el select del documento
 const colorSelect = document.getElementById('colorSelect');
 
@@ -122,94 +189,7 @@ function getRandomColor() {
 }
 
 
-//EJERCICIO 6
-// Obtenemos la imagen del documento
-const imagenGato = document.getElementById('imagenGato');
-
-// Agregamos un evento de mouseover a la imagen
-imagenGato.addEventListener('mouseover', function() {
-  // Generamos dos números aleatorios entre 300 y 600 para el width y height
-  const width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-  const height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-
-  // Creamos una nueva URL para la imagen con el tamaño aleatorio
-  const newUrl = `http://placekitten.com/${width}/${height}`;
-
-  // Cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
-  imagenGato.src = newUrl;
-});
-
-//SOLUCIONES CON COPILOT
-//EJERCICIO 1
-//crea una función que muestre la posición del mouse en el documento
-function mousePosition(event) {
-    //obtenemos la posición del mouse
-    var x = event.clientX;
-    var y = event.clientY;
-    //obtenemos el elemento del DOM donde se mostrará la posición del mouse
-    var mousePosition = document.getElementById("mousePosition");
-    //mostramos la posición del mouse en el elemento del DOM
-    mousePosition.innerHTML = "Posición del mouse: X=" + x + ", Y=" + y;
-  }
-
-//EJERCICIO 2
-//crea una función que obtenga el nombre y apellido de las cajas y que agregue después del botón un elemento que muestre el nombre completo
-function getFullName() {
-    //obtenemos el nombre y apellido de las cajas de texto
-    var firstName = document.getElementById("form-fname").value;
-    var lastName = document.getElementById("form-lname").value;
-    //obtenemos el elemento del DOM donde se mostrará el nombre completo
-    var fullNameElement = document.getElementById("fullName");
-    //mostramos el nombre completo en el elemento del DOM
-    fullNameElement.innerHTML = "Nombre completo: " + firstName + " " + lastName;
-  }
-
-//EJERCICIO 3
-//crea una función que inserte una fila y una columna en la tabla
-function insertRow() {
-    //obtenemos la tabla
-    var table = document.getElementById("sampleTable");
-    //creamos una nueva fila
-    var row = table.insertRow(-1);
-    //creamos dos nuevas celdas
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    //mostramos las celdas en blanco
-    cell1.innerHTML = "";
-    cell2.innerHTML = "";
-  }
-
-function insertColumn() {
-    //obtenemos la tabla
-    var table = document.getElementById("sampleTable");
-    //obtenemos todas las filas de la tabla
-    var rows = table.rows;
-    //recorremos las filas
-    for (var i = 0; i < rows.length; i++) {
-      //insertamos una celda en cada fila
-      var cell = rows[i].insertCell(-1);
-      //mostramos las celdas en blanco
-      cell.innerHTML = "";
-    }
-  }
-
-//EJERCICIO 4
-//crea una función que cambie el valor de una celda de la tabla
-function changeValue() {
-    //obtenemos los valores de las cajas de texto
-    var rowIndex = document.getElementById("rowIndex").value;
-    var colIndex = document.getElementById("colIndex").value;
-    var newValue = document.getElementById("newValue").value;
-    //obtenemos la tabla
-    var table = document.getElementById("myTable");
-    //obtenemos la fila y la celda de la tabla
-    var row = table.rows[rowIndex];
-    var cell = row.cells[colIndex];
-    //mostramos el nuevo valor en la celda
-    cell.innerHTML = newValue;
-  }
-
-//EJERCICIO 5
+//EJERCICIO 5 CON COPILOT
 //crea una función que agregue y elimine colores de un select
 function addColor() {
     //generamos un color aleatorio
@@ -238,19 +218,36 @@ function getRandomColor() {
     return color;
   }
 
-//EJERCICIO 6
-//crea una función que cambie el tamaño de la imagen al pasar el mouse sobre ella
-function changeSize() {
-    //generamos un tamaño aleatorio
-    var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-    var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-    //creamos una nueva URL para la imagen con el tamaño aleatorio
-    var newUrl = "http://placekitten.com/" + width + "/" + height;
-    //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
-    var image = document.getElementById("image");
-    image.src = newUrl;
-  }
-
-
-
   
+  //EJERCICIO 6 CON GPT
+  // Obtenemos la imagen del documento
+  const imagenGato = document.getElementById('imagenGato');
+  
+  // Agregamos un evento de mouseover a la imagen
+  imagenGato.addEventListener('mouseover', function() {
+      // Generamos dos números aleatorios entre 300 y 600 para el width y height
+      const width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+      const height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+      
+      // Creamos una nueva URL para la imagen con el tamaño aleatorio
+      const newUrl = `http://placekitten.com/${width}/${height}`;
+      
+      // Cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+      imagenGato.src = newUrl;
+    });
+    
+    //EJERCICIO 6 CON COPILOT
+    //crea una función que cambie el tamaño de la imagen al pasar el mouse sobre ella
+    function changeSize() {
+        //generamos un tamaño aleatorio
+        var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+        var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+        //creamos una nueva URL para la imagen con el tamaño aleatorio
+        var newUrl = "http://placekitten.com/" + width + "/" + height;
+        //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+        var image = document.getElementById("image");
+        image.src = newUrl;
+      }
+    
+    
+    
