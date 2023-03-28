@@ -4,7 +4,7 @@ const mousePositionGPT = document.querySelector('#mousePositionGPT');
 // Agregar un event listener para capturar el movimiento del mouse en el documento
 document.addEventListener('mousemove', function(event) {
   // Actualizar el texto del párrafo con la posición actual del mouse
-  mousePositionGPT.textContent = `Posición del mouse: X=${event.clientX}, Y=${event.clientY}`;
+  mousePositionGPT.textContent = `Posición del mouse con GPT: X=${event.clientX}, Y=${event.clientY}`;
 });
 
 //EJERCICIO 1 CON COPILOT
@@ -16,8 +16,10 @@ function mousePositionCP(event) {
     //obtenemos el elemento del DOM donde se mostrará la posición del mouse
     var mousePositionCP = document.getElementById("mousePositionCP");
     //mostramos la posición del mouse en el elemento del DOM
-    mousePositionCP.innerHTML = "Posición del mouse: X=" + x + ", Y=" + y;
+    mousePositionCP.innerHTML = "Posición del mouse con Copilot: X=" + x + ", Y=" + y;
   }
+
+document.addEventListener("mousemove", mousePositionCP); //cp no agregó esto, gpt me dijo que era lo que faltaba
 
 //EJERCICIO 2 CON GPT
 // Agregar un evento de clic al botón de envío del formulario
