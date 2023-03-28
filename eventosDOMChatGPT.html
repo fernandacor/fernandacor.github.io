@@ -165,6 +165,7 @@
                 </details>
         </ol>
 
+        <h2> Preguntas</h2>
         <div class="grid">
             <div id="griddy">
                 <h3> 1. ¿Qué es el DOM? </h3>
@@ -176,7 +177,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>El DOM (Document Object Model) es una representación estructurada y jerárquica de un documento HTML o XML. Permite acceder y manipular los elementos y atributos del documento a través de una API (Application Programming Interface) para crear páginas web interactivas y dinámicas.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -193,7 +194,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>En el contexto del DOM, un nodo es un objeto que representa un elemento, atributo o texto dentro del documento. Los nodos se organizan en una estructura de árbol, donde el nodo raíz es el documento mismo, y los nodos hijos son elementos HTML, y los nodos hijos de estos pueden ser otros elementos, atributos o texto.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -210,7 +211,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>Para acceder a un elemento del DOM se utiliza el método getElementById, que busca un elemento en el documento a través de su ID. También se pueden utilizar otros métodos como getElementsByClassName o getElementsByTagName, que buscan elementos por su clase o etiqueta, respectivamente.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -228,7 +229,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>Para modificar un elemento del DOM, se pueden utilizar los métodos de la API DOM para manipular el contenido del elemento, su estilo, su clase y otros atributos. Por ejemplo, se puede modificar el contenido de un elemento con la propiedad innerHTML, o modificar su estilo con la propiedad style.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -246,7 +247,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>La diferencia entre getElementby* y querySelector* es que el primero busca elementos en el documento a través de su ID, clase o etiqueta, mientras que el segundo utiliza selectores CSS para buscar elementos. Por ejemplo, getElementById('elemento') busca un elemento con el ID 'elemento', mientras que querySelector('.elemento') busca el primer elemento que tenga la clase 'elemento'.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -264,7 +265,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>Un evento es una acción que ocurre en un elemento del documento, como hacer clic en un botón, mover el mouse sobre una imagen o presionar una tecla. Los eventos permiten a los desarrolladores responder a las interacciones del usuario con la página web.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -282,7 +283,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>Un listener (escucha) es una función que se ejecuta en respuesta a un evento. Se puede añadir un listener a un elemento del DOM para responder a eventos específicos, como hacer clic en un botón, y realizar una acción en consecuencia.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -300,7 +301,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>Un callback (llamada de vuelta) es una función que se pasa como argumento a otra función y que se ejecuta cuando se completa una operación. En el contexto del DOM, los callbacks se utilizan a menudo como listeners para responder a eventos y realizar acciones en consecuencia.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -318,7 +319,7 @@
                     </details>
                     <details>
                         <summary>Respuesta ChatGPT</summary>
-                        <p>Aquí va la respuesta de ChatGPT</p>
+                        <p>Un objeto de evento es un objeto que contiene información sobre un evento específico, como la posición del mouse en la pantalla, la tecla que se ha presionado o el elemento que ha sido clicado. Los objetos de evento se pasan como argumentos a las funciones de los listeners para que se pueda acceder a esta información.</p>
                     </details>
                     <details>
                         <summary>Verificación</summary>
@@ -335,21 +336,30 @@
         <p>1. Modifica el siguiente elemento para mostrar la posición del mouse en el documento:</p>
         <!-- RESPUESTA CHAT GPT -->
         <!-- Crear un párrafo con un ID "mousePosition" para mostrar la posición del mouse -->
-        <p id="mousePosition">Posición del mouse:</p>
+        <p id="mousePositionGPT">Posición del mouse con GPT:</p>
+        <p id="mousePositionCP">Posición del mouse con Copilot:</p>
 
         <!-- Incluir un script de JavaScript para capturar los eventos de mouse -->
-        <script>
+        <!-- <script>
         // Seleccionar el párrafo del DOM usando su ID
-        const mousePosition = document.querySelector('#mousePosition');
-        </script>
+        const mousePositionGPT = document.querySelector('#mousePositionGPT');
+        </script> -->
     </div>
 
     <div class="container">
         <p>2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga el nombre completo.</p>
-        <form id="form1">
-            First name: <input id="form-fname" type="text" name="fname" ><br>
-            Last name: <input id="form-lname" type="text" name="lname" ><br><br>
-        <input id="form1-submit" type="submit" value="Submit">
+        <form id="form1GPT">
+            First name: <input id="form-fnameGPT" type="text" name="fnameGPT" ><br>
+            Last name: <input id="form-lnameGPT" type="text" name="lnameGPT" ><br><br>
+        <input id="form1-submitGPT" type="submit" value="Submit">
+        </form>
+
+        <br>
+
+        <form id="form1CP">
+            First name: <input id="form-fnameCP" type="text" name="fnameCP" ><br>
+            Last name: <input id="form-lnameCP" type="text" name="lnameCP" ><br><br>
+        <input id="form1-submitCP" type="submit" value="Submit">
         </form>
     </div>
 
@@ -418,9 +428,38 @@
         <h4>Experiencia general</h4>
         <p> Mi experiencia general fue </p>
         <h4>¿Cuándo y para qué usarías ChatGPT y cuándo Copilot?</h4>
-        <h4>Ventajas de usar AI para programar</h4>
-        <h4>Desventajas de usar AI para programar</h4>
-    </div>
+        <p> Cuándo utilizar ChatGPT:
 
+            Para generar texto coherente y natural: ChatGPT está diseñado para entender el lenguaje natural y puede generar texto coherente y natural que puede ser útil para la creación de contenido, como textos de blogs o de redes sociales, correos electrónicos, etc.
+            Para ayudar en la redacción de documentos: ChatGPT puede ayudar a redactar documentos técnicos o de negocio, proporcionando sugerencias y corrigiendo errores gramaticales.
+            Cuándo utilizar GitHub Copilot:
+            
+            Para la generación de código: GitHub Copilot es una herramienta diseñada específicamente para generar código, y puede ser útil para acelerar el proceso de programación y reducir el tiempo necesario para la escritura de código.
+            Para ayudar en la comprensión de código existente: GitHub Copilot puede ayudar a entender y modificar código existente al proporcionar sugerencias y opciones de código mientras se escribe.
+            Para proyectos de software de código abierto: GitHub Copilot puede ser una herramienta valiosa para proyectos de software de código abierto, ya que puede ayudar a los desarrolladores a generar código y encontrar soluciones para problemas de programación. </p>
+        <h4>Ventajas de usar AI para programar</h4>
+        <p> Según ChatGPT, las ventajas de usar IA para programar son: </p>
+        <ol>
+        <li>Velocidad y eficiencia: La IA puede procesar grandes cantidades de datos y generar código de manera mucho más rápida que un programador humano. Esto puede reducir el tiempo de desarrollo y acelerar la salida al mercado de un producto.
+        <li>Reducción de errores: La IA puede ayudar a reducir errores en el código, ya que está diseñada para seguir patrones y detectar inconsistencias. Esto puede aumentar la calidad del código y disminuir el tiempo necesario para depurarlo.
+        <li>Adaptabilidad: La IA puede aprender de la retroalimentación y mejorar el código a medida que se utiliza. Esto permite que el programa se adapte mejor a las necesidades de los usuarios y del mercado.
+        <li> Escalabilidad: La IA puede crear código para aplicaciones de gran escala, lo que permite a las empresas manejar grandes cantidades de datos y escalar sus aplicaciones a medida que crecen.
+        </ol>
+            
+        <h4>Desventajas de usar AI para programar</h4>
+        <p> Según GitHub Copilot, las desventajas de usar IA para programar son: </p>
+        <ol>
+        <li>La IA no puede pensar por sí misma: La IA no puede pensar por sí misma, por lo que no puede tomar decisiones por sí misma. Esto significa que la IA no puede crear código que no haya sido programado por un humano.
+        <li>La IA no puede crear código de cero: La IA no puede crear código de cero, por lo que no puede crear código que no haya sido programado por un humano.
+        </ol>
+
+        <p> Segun ChatGPT, las desventajas de usar IA para programar son: </p>
+        <ol>
+            <li>Falta de creatividad: La IA puede ser eficiente en seguir patrones y procesar datos, pero carece de la creatividad humana necesaria para crear soluciones innovadoras y pensar fuera de lo común.
+            <li>Falta de contexto: La IA no siempre comprende el contexto en el que se utiliza un programa, lo que puede llevar a resultados inesperados o incluso peligrosos.
+            <li>Limitaciones de la tecnología: La IA todavía no puede igualar la habilidad humana en todos los aspectos de la programación, especialmente en áreas como la comprensión del lenguaje natural.
+            <li>Costos: La implementación de IA para programación puede ser costosa debido a la necesidad de infraestructura y talento especializado.
+        </ol>
+    </div>
 </body>
 </html>
