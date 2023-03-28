@@ -139,6 +139,117 @@ imagenGato.addEventListener('mouseover', function() {
   imagenGato.src = newUrl;
 });
 
+//SOLUCIONES CON COPILOT
+//EJERCICIO 1
+//crea una función que muestre la posición del mouse en el documento
+function mousePosition(event) {
+    //obtenemos la posición del mouse
+    var x = event.clientX;
+    var y = event.clientY;
+    //obtenemos el elemento del DOM donde se mostrará la posición del mouse
+    var mousePosition = document.getElementById("mousePosition");
+    //mostramos la posición del mouse en el elemento del DOM
+    mousePosition.innerHTML = "Posición del mouse: X=" + x + ", Y=" + y;
+  }
+
+//EJERCICIO 2
+//crea una función que obtenga el nombre y apellido de las cajas y que agregue después del botón un elemento que muestre el nombre completo
+function getFullName() {
+    //obtenemos el nombre y apellido de las cajas de texto
+    var firstName = document.getElementById("form-fname").value;
+    var lastName = document.getElementById("form-lname").value;
+    //obtenemos el elemento del DOM donde se mostrará el nombre completo
+    var fullNameElement = document.getElementById("fullName");
+    //mostramos el nombre completo en el elemento del DOM
+    fullNameElement.innerHTML = "Nombre completo: " + firstName + " " + lastName;
+  }
+
+//EJERCICIO 3
+//crea una función que inserte una fila y una columna en la tabla
+function insertRow() {
+    //obtenemos la tabla
+    var table = document.getElementById("sampleTable");
+    //creamos una nueva fila
+    var row = table.insertRow(-1);
+    //creamos dos nuevas celdas
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    //mostramos las celdas en blanco
+    cell1.innerHTML = "";
+    cell2.innerHTML = "";
+  }
+
+function insertColumn() {
+    //obtenemos la tabla
+    var table = document.getElementById("sampleTable");
+    //obtenemos todas las filas de la tabla
+    var rows = table.rows;
+    //recorremos las filas
+    for (var i = 0; i < rows.length; i++) {
+      //insertamos una celda en cada fila
+      var cell = rows[i].insertCell(-1);
+      //mostramos las celdas en blanco
+      cell.innerHTML = "";
+    }
+  }
+
+//EJERCICIO 4
+//crea una función que cambie el valor de una celda de la tabla
+function changeValue() {
+    //obtenemos los valores de las cajas de texto
+    var rowIndex = document.getElementById("rowIndex").value;
+    var colIndex = document.getElementById("colIndex").value;
+    var newValue = document.getElementById("newValue").value;
+    //obtenemos la tabla
+    var table = document.getElementById("myTable");
+    //obtenemos la fila y la celda de la tabla
+    var row = table.rows[rowIndex];
+    var cell = row.cells[colIndex];
+    //mostramos el nuevo valor en la celda
+    cell.innerHTML = newValue;
+  }
+
+//EJERCICIO 5
+//crea una función que agregue y elimine colores de un select
+function addColor() {
+    //generamos un color aleatorio
+    var color = getRandomColor();
+    //creamos un elemento option
+    var option = document.createElement("option");
+    //agregamos el color como valor y texto del option
+    option.value = color;
+    option.text = color;
+    //agregamos el option al select
+    colorSelect.add(option);
+  }
+
+function removeColor() {
+    //eliminamos el último elemento del select
+    colorSelect.remove(colorSelect.length - 1);
+  }
+
+//función para generar un color aleatorio
+function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+//EJERCICIO 6
+//crea una función que cambie el tamaño de la imagen al pasar el mouse sobre ella
+function changeSize() {
+    //generamos un tamaño aleatorio
+    var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+    var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+    //creamos una nueva URL para la imagen con el tamaño aleatorio
+    var newUrl = "http://placekitten.com/" + width + "/" + height;
+    //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+    var image = document.getElementById("image");
+    image.src = newUrl;
+  }
 
 
 
