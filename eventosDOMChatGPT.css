@@ -3,6 +3,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1, h2, h3
+{
+    text-align: center;
+}
+
 .container
 {
     padding: 10px;
