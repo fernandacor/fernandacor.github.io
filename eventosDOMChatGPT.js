@@ -31,7 +31,7 @@ document.getElementById("form1-submitGPT").addEventListener("click", function(ev
     var lastNameGPT = document.getElementById("form-lnameGPT").value;
   
     // Combinar los valores de nombre y apellido en una variable de nombre completo
-    var fullNameGPT = firstNameGPT + " " + lastNameGPT;
+    var fullNameGPT = "Nombre completo: " + firstNameGPT + " " + lastNameGPT;
   
     // Crear un nuevo elemento de párrafo y establecer su contenido de texto en el nombre completo
     var fullNameElementGPT = document.createElement("p");
@@ -43,16 +43,6 @@ document.getElementById("form1-submitGPT").addEventListener("click", function(ev
   });
 
 //EJERCICIO 2 CON COPILOT
-//crea una función que obtenga el nombre y apellido de las cajas y que agregue después del botón un elemento que muestre el nombre completo
-function getFullNameCP() {
-    //obtenemos el nombre y apellido de las cajas de texto
-    var firstNameCP = document.getElementById("form-fnameCP").value;
-    var lastNameCP = document.getElementById("form-lnameCP").value;
-    //obtenemos el elemento del DOM donde se mostrará el nombre completo
-    var fullNameElementCP = document.getElementById("fullNameCP");
-    //mostramos el nombre completo en el elemento del DOM
-    fullNameElementCP.innerHTML = "Nombre completo: " + firstNameCP + " " + lastNameCP;
-  }
 
 //EJERCICIO 3 CON GPT
 // Obtener los botones de inserción de fila y columna
@@ -66,7 +56,9 @@ insertRowBtnGPT.addEventListener("click", function() {
 
     // Crear dos nuevas celdas y agregarlas a la nueva fila
     var newCell1GPT = document.createElement("td");
+    newCell1GPT.textContent = "New Row";
     var newCell2GPT = document.createElement("td");
+    newCell2GPT.textContent = "New Row";
     newRowGPT.appendChild(newCell1GPT);
     newRowGPT.appendChild(newCell2GPT);
 
@@ -82,6 +74,7 @@ insertColBtnGPT.addEventListener("click", function() {
     // Para cada fila, crear una nueva celda y agregarla al final
     rowsGPT.forEach(function(rowGPT) {
         var newCellGPT = document.createElement("td");
+        newCellGPT.textContent = "New Column";
         rowGPT.appendChild(newCellGPT);
     });
 });
@@ -97,8 +90,8 @@ insertColBtnGPT.addEventListener("click", function() {
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         //mostramos las celdas en blanco
-        cell1.innerHTML = "";
-        cell2.innerHTML = "";
+        cell1.innerHTML = "New Row";
+        cell2.innerHTML = "New Row";
     }
     
     function insertColumn() {
@@ -111,7 +104,7 @@ insertColBtnGPT.addEventListener("click", function() {
             //insertamos una celda en cada fila
             var cell = rows[i].insertCell(-1);
             //mostramos las celdas en blanco
-            cell.innerHTML = "";
+            cell.innerHTML = "New Column";
         }
     }
 
@@ -138,7 +131,7 @@ function insertColumnCP() {
     //recorremos las filas
     for (var i = 0; i < rows.length; i++) {
         //insertamos una celda en cada fila
-        var cell = rows[i].insertCell(-1);
+        var cell = rows[i].insertCell(+1); //me puso -1 y lo cambié a +1
         //mostramos las celdas en blanco
         cell.innerHTML = "";
     }
@@ -252,7 +245,7 @@ function getRandomColor() {
   
   //EJERCICIO 6 CON GPT
   // Obtenemos la imagen del documento
-  const imagenGato = document.getElementById('imagenGato');
+  const imagenGato = document.getElementById('imagenGatoGPT');
   
   // Agregamos un evento de mouseover a la imagen
   imagenGato.addEventListener('mouseover', function() {
@@ -269,16 +262,32 @@ function getRandomColor() {
     
     //EJERCICIO 6 CON COPILOT
     //crea una función que cambie el tamaño de la imagen al pasar el mouse sobre ella
-    // function changeSize() {
-    //     //generamos un tamaño aleatorio
-    //     var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-    //     var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-    //     //creamos una nueva URL para la imagen con el tamaño aleatorio
-    //     var newUrl = "http://placekitten.com/" + width + "/" + height;
-    //     //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
-    //     var image = document.getElementById("image");
-    //     image.src = newUrl;
-    //   }
+    function changeSize() {
+        //generamos un tamaño aleatorio
+        var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+        var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+        //creamos una nueva URL para la imagen con el tamaño aleatorio
+        var newUrl = "http://placekitten.com/" + width + "/" + height;
+        //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+        var image = document.getElementById("imagenGatoCP");
+        image.src = newUrl;
+      // agrega un evento de mouseover a la imagen
+      image.addEventListener("mouseover", changeSize);
+      }
+    
+      //crea una función que cambie el tamaño de la imagen al pasar el mouse sobre ella con un event listener mouseover
+      function changeSize() {
+        //generamos un tamaño aleatorio
+        var width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+        var height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+        //creamos una nueva URL para la imagen con el tamaño aleatorio
+        var newUrl = "http://placekitten.com/" + width + "/" + height;
+        //cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+        var imagen = document.getElementById("imagenGatoCP");
+        image.src = newUrl;
+      }
+      image.addEventListener("mouseover", changeSize);
+      
     
     
     
