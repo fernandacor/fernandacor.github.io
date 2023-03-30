@@ -10,162 +10,14 @@
 <body>
     <h1>Eventos y DOM y ChatGPT</h1>
 
-    <div class="container">
-        <h2>Instrucciones</h2>
-        <p>Utiliza ChatGPT y github Copilot para resolver la siguiente actividad. Antes de hacer los ejercicios, contesta las siguientes preguntas. Pregúntale a ChatGPT las preguntas, y verifica que lo que haya generado es correcto. Cuando sea necesario, agrega un ejemplo de código. Incluye una fuente que valide o invalide lo que generó. Agrega elementos de HTML con tus respuestas. (<b>Protip</b>: usa ChatGPT para que las respuestas las ponga directamente en elementos de html.)</p>
+        <div class="container">
+            <h2>Instrucciones</h2>
+            <p>Utiliza ChatGPT y github Copilot para resolver la siguiente actividad. Antes de hacer los ejercicios, contesta las siguientes preguntas. Pregúntale a ChatGPT las preguntas, y verifica que lo que haya generado es correcto. Cuando sea necesario, agrega un ejemplo de código. Incluye una fuente que valide o invalide lo que generó. Agrega elementos de HTML con tus respuestas. (<b>Protip</b>: usa ChatGPT para que las respuestas las ponga directamente en elementos de html.)</p>
 
-        <p>Terminando las preguntas y los ejercicios, documenta tu experiencia con las herramientas en la sección de conclusiones. </p>
-    </div>
-
-    <!-- PREGUNTAS
-    <div class="container">
-        <h3>Preguntas</h3>
-        <ol>
-            <li>¿Qué es el DOM?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p>
-                    <!-- q: ¿Qué es el DOM? -->
-                    <!-- a: El DOM es la representación de un documento HTML como un árbol de nodos. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-            <li>¿Qué es un nodo?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>Un nodo es un elemento del DOM</p> -->
-                    <!-- q: ¿Qué es un nodo? -->
-                    <!-- a: Un nodo es un elemento del DOM. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-
-            <li>¿Cómo se accede a un elemento del DOM?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>Se accede a un elemento del DOM con getElementbyId, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll. </p> -->
-                    <!-- q: ¿Cómo se accede a un elemento del DOM? -->
-                    <!-- a: Se accede a un elemento del DOM con getElementById, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-
-            <li>¿Cómo se modifica un elemento del DOM?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p> -->
-                    <!-- q: ¿Cómo se modifica un elemento del DOM? -->
-                    <!-- a: Se modifica un elemento del DOM con innerHTML, innerText, textContent, value, setAttribute, removeAttribute, appendChild, removeChild, replaceChild. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-            
-            <li>¿Cuál es la diferencia entre getElementby* y querySelector*?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p> -->
-                    <!-- q: ¿Cuál es la diferencia entre getElementby* y querySelector*? -->
-                    <!-- a: getElementby* devuelve un elemento, querySelector* devuelve una lista de elementos. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-            
-            <li>¿Qué es un evento?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p> -->
-                    <!-- q: ¿Qué es un evento? -->
-                    <!-- a: Un evento es una acción que ocurre en el navegador. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-            
-            <li>¿Qué es un listener?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p> -->
-                    <!-- q: ¿Qué es un listener? -->
-                    <!-- a: Un listener es una función que se ejecuta cuando ocurre un evento. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-            
-            <li>¿Qué es un callback?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p> -->
-                    <!-- q: ¿Qué es un callback? -->
-                    <!-- a: Un callback es una función que se pasa como argumento a otra función. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-            
-            <li>¿Qué es un objeto de evento?</li>
-                <details>
-                    <summary>Respuesta CoPilot</summary>
-                    <p>El DOM es la representación de un documento HTML como un árbol de nodos.</p> -->
-                    <!-- q: ¿Qué es un objeto de evento? -->
-                    <!-- a: Un objeto de evento es un objeto que contiene información sobre el evento que ocurrió. -->
-                <!-- </details>
-                <details>
-                    <summary>Respuesta ChatGPT</summary>
-                    <p>Aquí va la respuesta de ChatGPT</p>
-                </details>
-                <details>
-                    <summary>Verificación</summary>
-                    <p>La respuesta de CoPilot es correcta.</p>
-                </details>
-        </ol> -->
+            <p>Terminando las preguntas y los ejercicios, documenta tu experiencia con las herramientas en la sección de conclusiones. </p>
+        </div>
         
-        <h2> Preguntas</h2>
+    <h2> Preguntas</h2>
         <div class="grid">
             <div id="griddy">
                 <h3> 1. ¿Qué es el DOM? </h3>
@@ -181,7 +33,7 @@
                     </details>
                     <details>
                         <summary>Verificación</summary>
-                        <p>La respuesta de CoPilot es correcta.</p>
+                        <p>Al verificar con la documentación de Javascript de Mozilla, la cúal dice que el DOM es una API definida para representar e interactuar con cualquier documento HTML o XML,  </p>
                     </details>
             </div>
             <div id="griddy">
@@ -327,9 +179,9 @@
                     </details>
             </div>
     </div>
-
 <hr>
-    <h3>Ejercicios de código</h3>
+    
+<h3>Ejercicios de código</h3>
     <p>Usa ChatGPT y copilot para resolver los ejercicios. Por cada ejercicio, pídele a ChatGPT o a copilot que te genere los comentarios. Verifica los resultados antes de subirlos a tu repo.</p>
 <hr>
     <!-- EJERCICIOS DE CÓDIGO -->
@@ -358,19 +210,6 @@
 
     <div class="container">
         <p>3. Agrega el código para agregar una fila, o una columna, a la siguiente tabla al dar click al botón correspondiente.</p>
-        <!-- <table id="sampleTable">
-            <tr>
-                <td>Row 1 column 1</td>
-                <td>Row 1 column 2</td>
-            </tr>
-            <tr>
-                <td>Row 2 column 1</td>
-                <td>Row 2 column 2</td>
-            </tr>
-        </table><br>
-        <input id="btn-insert-r" type="button" value="Insert row">
-        <input id="btn-insert-c" type="button" value="Insert column"> -->
-
         <table id="sampleTableGPT">
             TABLA HECHA CON CHAT GPT
             <tr>
@@ -404,7 +243,7 @@
 
     <div class="container">
         <p>4. Incluye dos cajas de input, para solicitar al usuario la posición de la fila y columna de la siguiente tabla, y otra para solicitar un texto. Al apretar el botón, actualiza el contenido de esa tabla en la posición que solicitaste, con la cadena de texto que solicitaste.</p>
-        <table id="myTable">
+        <table id="myTableGPT">
             <tr>
                 <td>Row1 cell1</td>
                 <td>Row1 cell2</td>
@@ -421,10 +260,34 @@
                 <td>Row3 cell3</td>
             </tr>
             </table><form><br>
-            <input id="rowIndex" type="text" placeholder="Row Index">
-            <input id="colIndex" type="text" placeholder="Col Index">
-            <input id="newValue" type="text" placeholder="New Value">
-            <input id="btn-change" type="button" value="Change content">
+            <input id="rowIndexGPT" type="text" placeholder="Row Index">
+            <input id="colIndexGPT" type="text" placeholder="Col Index">
+            <input id="newValueGPT" type="text" placeholder="New Value">
+            <input id="btn-changeGPT" type="button" value="Change content">
+
+                <br><br>
+
+            <table id="myTableCP">
+                <tr>
+                    <td>Row1 cell1</td>
+                    <td>Row1 cell2</td>
+                    <td>Row1 cell3</td>
+                </tr>
+                <tr>
+                    <td>Row2 cell1</td>
+                    <td>Row2 cell2</td>
+                    <td>Row2 cell3</td>
+                </tr>
+                <tr>
+                    <td>Row3 cell1</td>
+                    <td>Row3 cell2</td>
+                    <td>Row3 cell3</td>
+                </tr>
+                </table><form><br>
+                <input id="rowIndexCP" type="text" placeholder="Row Index">
+                <input id="colIndexCP" type="text" placeholder="Col Index">
+                <input id="newValueCP" type="text" placeholder="New Value">
+                <input id="btn-changeCP" type="button" value="Change content">
     </div>
 
     <div class="container">
