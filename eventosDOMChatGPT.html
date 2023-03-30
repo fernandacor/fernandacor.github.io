@@ -21,9 +21,9 @@
         </div>
         
     <h2> Preguntas</h2>
-        <div class="grid">
+        <div class="gridPreguntas">
             <!-- Pregunta #1 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3> 1. ¿Qué es el DOM? </h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -51,7 +51,7 @@
             </div>
 
             <!-- Pregunta #2 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3> 2. ¿Qué es un nodo? </h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -75,7 +75,7 @@
             </div>
 
             <!-- Pregunta #3 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3> 3. ¿Cómo se accede a un elemento del DOM? </h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -116,7 +116,7 @@
             </div>
             
             <!-- Pregunta #4 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3> 4. ¿Cómo se modifica un elemento del DOM? </h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -142,7 +142,7 @@
             </div>
 
             <!-- Pregunta #5 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3>5. ¿Cuál es la diferencia entre getElementby* y querySelector*?</h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -163,7 +163,7 @@
             </div>
             
             <!-- Pregunta #6 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3>6. ¿Qué es un evento?</h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -183,7 +183,7 @@
             </div>
             
             <!-- Pregunta #7 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3>7. ¿Qué es un listener?</h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -203,7 +203,7 @@
             </div>
             
             <!-- Pregunta #8 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3>8. ¿Qué es un callback?</h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -226,7 +226,7 @@
             </div>
             
             <!-- Pregunta #9 -->
-            <div id="griddy">
+            <div id="boxesPreguntas">
                 <h3>9. ¿Qué es un objeto de evento?</h3>
                     <details>
                         <summary>Respuesta CoPilot</summary>
@@ -248,7 +248,7 @@
     </div>
     <br>
             <!-- Referencias -->
-            <div id ="griddylargo">
+            <div id ="boxReferencias">
                 <details>
                     <summary>Referencias</summary>
                     <ol>
@@ -280,20 +280,20 @@
         resultados antes de subirlos a tu repo.</p>
 <hr>
 
-<div class="templateEjercicios">
-    <!-- EJERCICIOS DE CÓDIGO -->
+<!-- EJERCICIOS DE CÓDIGO -->
+<div>
     <!-- Ejercicio 1 -->
-    <div>
-        <p id="quest1">1. Modifica el siguiente elemento para mostrar la posición del mouse en el documento:</p>
-        <p id="mousePositionGPT">Posición del mouse con GPT:</p>
-        <p id="mousePositionCP">Posición del mouse con Copilot:</p>
+    <div class="gridEjercicios">
+        <h4>1. Modifica el siguiente elemento para mostrar la posición del mouse en el documento:</h4>
+        <p class="boxGPT" id="mousePositionGPT">Posición del mouse con GPT:</p>
+        <p class="boxCP" id="mousePositionCP">Posición del mouse con Copilot:</p>
     </div>
 
     <!-- Ejercicio 2 -->
-    <div>
-        <p class="quest" id="quest2">2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga 
-            el nombre completo.</p>
-        <form class="conGPT" id="form1GPT">
+    <div class="gridEjercicios">
+        <h4>2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga 
+            el nombre completo.</h4>
+        <form class="boxGPT" id="form1GPT">
             First name: <input id="form-fnameGPT" type="text" name="fnameGPT" ><br>
             Last name: <input id="form-lnameGPT" type="text" name="lnameGPT" ><br><br>
         <input id="form1-submitGPT" type="submit" value="Submit">
@@ -301,7 +301,7 @@
 
         <br>
 
-        <form class="conCP" id="form1CP">
+        <form class="boxCP" id="form1CP">
             First name: <input id="form-fnameCP" type="text" name="fnameCP" ><br>
             Last name: <input id="form-lnameCP" type="text" name="lnameCP" ><br><br>
         <input id="form1-submitCP" type="submit" value="Submit">
@@ -309,68 +309,49 @@
     </div>
 
     <!-- Ejercicio 3 -->
-    <div>
-        <p class="quest" id="quest3">3. Agrega el código para agregar una fila, o una columna, a la siguiente tabla al dar click al botón correspondiente.</p>
-        <table class= "conGPT" id="sampleTableGPT">
-            TABLA HECHA CON CHAT GPT
-            <tr>
-                <td>Row 1 column 1</td>
-                <td>Row 1 column 2</td>
-            </tr>
-            <tr>
-                <td>Row 2 column 1</td>
-                <td>Row 2 column 2</td>
-            </tr>
-        </table><br>
-        <input id="btn-insert-r-GPT" type="button" value="Insert row">
-        <input id="btn-insert-c-GPT" type="button" value="Insert column">
+    <div class="gridEjercicios">
+        <h4>3. Agrega el código para agregar una fila, o una columna, a la siguiente tabla al dar click al botón correspondiente.</h4>
+        
+        <div class="boxGPT">
+            <table id="sampleTableGPT">
+                <p>TABLA HECHA CON CHAT GPT</p>
+                <tr>
+                    <td>Row 1 column 1</td>
+                    <td>Row 1 column 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2 column 1</td>
+                    <td>Row 2 column 2</td>
+                </tr>
+            </table><br>
+            <input id="btn-insert-r-GPT" type="button" value="Insert row">
+            <input id="btn-insert-c-GPT" type="button" value="Insert column">
+        </div>
 
-            <br><br>
-
-        <table class="conCP" id="sampleTableCP">
-            TABLA HECHA CON GITHUB COPILOT
-            <tr>
-                <td>Row 1 column 1</td>
-                <td>Row 1 column 2</td>
-            </tr>
-            <tr>
-                <td>Row 2 column 1</td>
-                <td>Row 2 column 2</td>
-            </tr>
-        </table><br>
-        <input id="btn-insert-r-CP" type="button" value="Insert row">
-        <input id="btn-insert-c-CP" type="button" value="Insert column">
+        <div class="boxCP">
+            <table id="sampleTableCP">
+                <h3>TABLA HECHA CON COPILOT</h3>
+                <tr>
+                    <td>Row 1 column 1</td>
+                    <td>Row 1 column 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2 column 1</td>
+                    <td>Row 2 column 2</td>
+                </tr>
+            </table><br>
+            <input id="btn-insert-r-CP" type="button" value="Insert row">
+            <input id="btn-insert-c-CP" type="button" value="Insert column">
+        </div>
     </div>
 
     <!-- Ejercicio 4 -->
-    <div>
-        <p class="quest" id="quest4">4. Incluye dos cajas de input, para solicitar al usuario la posición de la fila y columna de la siguiente tabla, y otra para solicitar un texto. 
-            Al apretar el botón, actualiza el contenido de esa tabla en la posición que solicitaste, con la cadena de texto que solicitaste.</p>
-        <table class="conGPT" id="myTableGPT">
-            <tr>
-                <td>Row1 cell1</td>
-                <td>Row1 cell2</td>
-                <td>Row1 cell3</td>
-            </tr>
-            <tr>
-                <td>Row2 cell1</td>
-                <td>Row2 cell2</td>
-                <td>Row2 cell3</td>
-            </tr>
-            <tr>
-                <td>Row3 cell1</td>
-                <td>Row3 cell2</td>
-                <td>Row3 cell3</td>
-            </tr>
-            </table><form><br>
-            <input id="rowIndexGPT" type="text" placeholder="Row Index">
-            <input id="colIndexGPT" type="text" placeholder="Col Index">
-            <input id="newValueGPT" type="text" placeholder="New Value">
-            <input id="btn-changeGPT" type="button" value="Change content">
-
-            <br><br>
-
-            <table class="conCP" id="myTableCP">
+    <div class="gridEjercicios">
+        <h4>4. Incluye dos cajas de input, para solicitar al usuario la posición de la fila y columna de la siguiente tabla, y otra para solicitar un texto. 
+            Al apretar el botón, actualiza el contenido de esa tabla en la posición que solicitaste, con la cadena de texto que solicitaste.</h4>
+        
+        <div class="boxGPT">
+            <table id="myTableGPT">
                 <tr>
                     <td>Row1 cell1</td>
                     <td>Row1 cell2</td>
@@ -386,18 +367,44 @@
                     <td>Row3 cell2</td>
                     <td>Row3 cell3</td>
                 </tr>
-                </table><form><br>
-                <input id="rowIndexCP" type="text" placeholder="Row Index">
-                <input id="colIndexCP" type="text" placeholder="Col Index">
-                <input id="newValueCP" type="text" placeholder="New Value">
-                <input id="btn-changeCP" type="button" value="Change content">
+            </table><form><br>
+            <input id="rowIndexGPT" type="text" placeholder="Row Index">
+            <input id="colIndexGPT" type="text" placeholder="Col Index">
+            <input id="newValueGPT" type="text" placeholder="New Value">
+            <input id="btn-changeGPT" type="button" value="Change content">
+        </div>
+
+        <div class="boxCP">
+            <table id="myTableCP">
+                <tr>
+                    <td>Row1 cell1</td>
+                    <td>Row1 cell2</td>
+                    <td>Row1 cell3</td>
+                </tr>
+                <tr>
+                    <td>Row2 cell1</td>
+                    <td>Row2 cell2</td>
+                    <td>Row2 cell3</td>
+                </tr>
+                <tr>
+                    <td>Row3 cell1</td>
+                    <td>Row3 cell2</td>
+                    <td>Row3 cell3</td>
+                </tr>
+            </table><form><br>
+            <input id="rowIndexCP" type="text" placeholder="Row Index">
+            <input id="colIndexCP" type="text" placeholder="Col Index">
+            <input id="newValueCP" type="text" placeholder="New Value">
+            <input id="btn-changeCP" type="button" value="Change content">
+        </div>
     </div>
 
     <!-- Ejercicio 5 -->
-    <div>
-        <p class="quest" id="quest5">5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.</p>
-        <p>Color select con GPT</p>
-        <form class="conGPT">
+    <div class="gridEjercicios">
+        <h4>5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.</h4>
+        <div class="boxGPT">
+        <p>Color select con GPT:</p>
+        <form>
             <select id="colorSelectGPT">
                 <option>Red</option>
                 <option>Green</option>
@@ -407,9 +414,11 @@
             <input id="btn-add-colorGPT" type="button" value="Add color">
             <input id="btn-rmv-colorGPT" type="button" value="Remove color">
         </form>
+        </div>
 
-        <p>Color select con GitHub Copilot</p>
-        <form class="conCP">
+        <div class="boxCP">
+        <p>Color select con GitHub Copilot:</p>
+        <form>
             <select id="colorSelectCP">
                 <option>Red</option>
                 <option>Green</option>
@@ -419,15 +428,15 @@
             <input id="btn-add-colorCP" type="button" value="Add color">
             <input id="btn-rmv-colorCP" type="button" value="Remove color">
         </form>
+        </div>
     </div>
 
     <!-- Ejercicio 6 -->
-    <div>
-        <p class="quest" id="quest6">6. Al poner el mouse encima de la siguiente imagen, genera dos números aleatorios entre 300 y 600 para el width y height de una imagen. 
-            Reemplaza la imagen de placeholder por otra similar con el tamaño random que generaste. El evento solo se dispara cuando el mouse entra en la imagen.</p>
-        <img class="conGPT" id="imagenGatoGPT" src="http://placekitten.com/200/300">
-        <br><br>
-        <img class="conCP" id="imagenGatoCP" src="http://placekitten.com/200/300">
+    <div class="gridEjercicios">
+        <h4>6. Al poner el mouse encima de la siguiente imagen, genera dos números aleatorios entre 300 y 600 para el width y height de una imagen. 
+            Reemplaza la imagen de placeholder por otra similar con el tamaño random que generaste. El evento solo se dispara cuando el mouse entra en la imagen.</h4>
+        <img class="boxGPT" id="imagenGatoGPT" src="http://placekitten.com/200/300">
+        <img class="boxCP" id="imagenGatoCP" src="http://placekitten.com/200/300">
     </div>
 </div>
 
@@ -472,17 +481,6 @@
             <li>Costos: La implementación de IA para programación puede ser costosa debido a la necesidad de infraestructura y talento especializado.
         </ol>
     </div>
-
-
-<!-- Prueba Template -->
-<div class="pruebaTemp">
-    <p id="pruebaTemp1">pregunta</p>
-    <p id="pruebaTemp2">ejercicio con gepeto</p>
-    <p id="pruebaTemp3">ejercicio con copi</p>
-</div>
-
-
-
 </body>
 
 </html>
