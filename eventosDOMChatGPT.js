@@ -100,6 +100,34 @@ insertColBtnGPT.addEventListener("click", function() {
 });
 
 //EJERCICIO 3 CON COPILOT
+//crea una función que inserte una nueva fila y una nueva columna en la tabla al hacer clic en los botones de inserción de fila y columna respectivamente 
+function insertRowCP() {
+    //crea una nueva fila
+    var newRowCP = document.createElement("tr");
+    //crea dos nuevas celdas y las agrega a la nueva fila
+    var newCell1CP = document.createElement("td");
+    newCell1CP.textContent = "New Row";
+    var newCell2CP = document.createElement("td");
+    newCell2CP.textContent = "New Row";
+    newRowCP.appendChild(newCell1CP);
+    newRowCP.appendChild(newCell2CP);
+    //obtiene una referencia a la tabla y agrega la nueva fila al final
+    var tableCP = document.getElementById("sampleTableCP");
+    tableCP.appendChild(newRowCP);
+}
+function insertColCP() {
+    //obtiene todas las filas de la tabla
+    var rowsCP = document.querySelectorAll("#sampleTableCP tr");
+    //para cada fila, crea una nueva celda y la agrega al final
+    rowsCP.forEach(function(rowCP) {
+        var newCellCP = document.createElement("td");
+        newCellCP.textContent = "New Column";
+        rowCP.appendChild(newCellCP);
+    });
+}
+//agrega un evento de clic a cada botón de inserción
+document.getElementById("btn-insert-r-CP").addEventListener("click", insertRowCP);
+document.getElementById("btn-insert-c-CP").addEventListener("click", insertColCP);
 
 //EJERCICIO 4 CON GPT
 // Obtenemos los elementos HTML de las cajas de entrada y el botón
@@ -125,6 +153,20 @@ changeButtonGPT.addEventListener('click', function() {
 });
 
 //EJERCICIO 4 CON COPILOT
+//crea una función que solicite al usuario la posicion de la fila y columna de la tabla que desea cambiar y el nuevo valor para la celda seleccionada que se actualize cuando se haga clic en el botón de cambiar contenido 
+function changeContentCP() {
+    //obtiene los valores ingresados por el usuario en las cajas de entrada
+    var rowIndexCP = parseInt(document.getElementById("rowIndexCP").value);
+    var colIndexCP = parseInt(document.getElementById("colIndexCP").value);
+    var newValueCP = document.getElementById("newValueCP").value;
+    //obtiene la fila y la celda de la tabla correspondiente a los índices ingresados
+    var rowCP = document.getElementById("myTableCP").rows[rowIndexCP];
+    var cellCP = rowCP.cells[colIndexCP];
+    //actualiza el contenido de la celda con el nuevo valor ingresado por el usuario
+    cellCP.innerHTML = newValueCP;
+}
+//agrega un evento de clic al botón
+document.getElementById("btn-changeCP").addEventListener("click", changeContentCP);
 
 //EJERCICIO 5 CON GPT
 // Obtenemos el select del documento
@@ -163,30 +205,76 @@ function getRandomColor() {
 }
 
 //EJERCICIO 5 CON COPILOT
+//crea una función que quite o agregue elementos al select cuando se haga clic en los botones de agregar o eliminar color
+function addColorCP() {
+    //genera un color aleatorio
+    var colorCP = getRandomColorCP();
+    //crea un elemento option y lo agrega al select
+    var optionCP = document.createElement("option");
+    optionCP.value = colorCP;
+    optionCP.text = colorCP;
+    document.getElementById("colorSelectCP").add(optionCP);
+}
+function removeColorCP() {
+    //elimina el último elemento del select
+    document.getElementById("colorSelectCP").remove(document.getElementById("colorSelectCP").length - 1);
+}
+//agrega un evento de clic a cada botón
+document.getElementById("btn-add-colorCP").addEventListener("click", addColorCP);
+document.getElementById("btn-rmv-colorCP").addEventListener("click", removeColorCP);
+
+//función para generar un color aleatorio
+function getRandomColorCP() {
+    var lettersCP = "0123456789ABCDEF";
+    var colorCP = "#"; 
+    for (var i = 0; i < 6; i++) {
+        colorCP += lettersCP[Math.floor(Math.random() * 16)];
+    }
+    return colorCP;
+}
+
   
 //EJERCICIO 6 CON GPT
 // Obtenemos la imagen del documento
-const imagenGato = document.getElementById('imagenGatoGPT');
+const imagenGatoGPT = document.getElementById('imagenGatoGPT');
 
 // Agregamos un evento de mouseover a la imagen
-imagenGato.addEventListener('mouseover', function() {
+imagenGatoGPT.addEventListener('mouseover', function() {
   // Generamos dos números aleatorios entre 300 y 600 para el width y height
-  const width = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
-  const height = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+  const widthGPT = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+  const heightGPT = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
 
   // Creamos una nueva URL para la imagen con el tamaño aleatorio
-  const newUrl = `http://placekitten.com/${width}/${height}`;
+  const newUrlGPT = `http://placekitten.com/${widthGPT}/${heightGPT}`;
 
   // Creamos un objeto de imagen para pre-cargar la imagen de tamaño aleatorio
-  const imagenNueva = new Image();
-  imagenNueva.onload = function() {
+  const imagenNuevaGPT = new Image();
+  imagenNuevaGPT.onload = function() {
     // Cambiamos la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
-    imagenGato.src = newUrl;
+    imagenGatoGPT.src = newUrlGPT;
   };
-  imagenNueva.src = newUrl;
+  imagenNuevaGPT.src = newUrlGPT;
 });
 
 //EJERCICIO 6 CON COPILOT  
+//crea una función que cambie el tamaño de la imagen cuando se pase el mouse sobre ella y que muestre una imagen similar a la original
+function changeSizeCP() {
+    //genera dos números aleatorios entre 300 y 600 para el width y height
+    var widthCP = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+    var heightCP = Math.floor(Math.random() * (600 - 300 + 1)) + 300;
+    //crea una nueva url para la imagen con el tamaño aleatorio
+    var newUrlCP = "http://placekitten.com/" + widthCP + "/" + heightCP;
+    //crea un objeto de imagen para pre-cargar la imagen de tamaño aleatorio
+    var imagenNuevaCP = new Image();
+    imagenNuevaCP.onload = function () {
+        //cambia la imagen de la imagen de placeholder por la nueva imagen con el tamaño aleatorio
+        document.getElementById("imagenGatoCP").src = newUrlCP;
+    };
+    imagenNuevaCP.src = newUrlCP;
+}
+//agrega un evento de mouseover a la imagen
+document.getElementById("imagenGatoCP").addEventListener("mouseover", changeSizeCP);
+
 
     
     
