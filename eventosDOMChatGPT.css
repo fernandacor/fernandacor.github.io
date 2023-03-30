@@ -1,6 +1,6 @@
 header
 {
-    background-color: #496b61;
+    background-color: #4a7568bc;
     color: white;
     text-align: center;
     padding: 5px;
@@ -13,7 +13,7 @@ body
     font-family: 'Courier New', Courier, monospace;
 }
 
-h1, h2, h3, h5
+h1, h3, h5
 {
     text-align: center;
 }
@@ -94,8 +94,19 @@ h4
 {
     background-color: #9dd0c1;
     border-radius: 10px;
+    padding: 1%;
+    width: fit-content;
+    margin: auto;
+}
+
+h2
+{
+    background-color: #9dd0c1;
+    border-radius: 10px;
     padding: 3%;
-    grid-area: boxyBox;
+    width: 30%;
+    margin: auto;
+    text-align: center;
 }
 
 
